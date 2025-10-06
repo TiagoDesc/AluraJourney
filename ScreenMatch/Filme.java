@@ -1,4 +1,8 @@
 public class Filme {
     String nome;
-    // testing
+    int anoDeLancamento;
+    boolean incluidoNoPlano;
+    double avaliacao;
+    int totalDeAvaliacoes;
+    int duracaoEmMinutos;
 }
