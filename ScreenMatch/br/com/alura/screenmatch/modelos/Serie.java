@@ -39,4 +39,11 @@ public class Serie extends Titulo {
         this.minutosPorEpisodio = minutosPorEpisodio;
     }
 
+    @Override
+    public void exibeFichaTecnica() {
+        System.out.println("Nome da serie: " + nome);
+        System.out.println("Ano de lançamento: " + anoDeLancamento);
+        System.out.println("Incluído no plano: " + incluidoNoPlano);
+    }
+
 }
