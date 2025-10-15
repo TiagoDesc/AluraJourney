@@ -26,6 +26,7 @@ public class Principal {
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
         lost.setMinutosPorEpisodio(50);
+        System.out.println("Tempo estimado para finalzar Lost: " + lost.getDuracaoEmMinutos());
 
     }
 
