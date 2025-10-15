@@ -47,4 +47,8 @@ public class Serie extends Titulo {
         System.out.println("Incluído no plano: " + incluidoNoPlano);
     }
 
+    public int getDuracaoEmMinutos() {
+        return temporadas * episodiosPorTemporada * minutosPorEpisodio;
+    }
+
 }
