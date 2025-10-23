@@ -40,10 +40,12 @@ public class Audio {
     }
 
     public void curte() {
+        this.totalCurtidas++;
 
     }
 
-    public void reproduzir() {
+    public void reproduz() {
+        this.totalReproducoes++;
 
     }
 
