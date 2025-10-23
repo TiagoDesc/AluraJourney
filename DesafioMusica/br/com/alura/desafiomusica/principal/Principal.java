@@ -1,5 +1,6 @@
 package DesafioMusica.br.com.alura.desafiomusica.principal;
 
+import DesafioMusica.br.com.alura.desafiomusica.modelos.MinhasPreferidas;
 import DesafioMusica.br.com.alura.desafiomusica.modelos.Musica;
 import DesafioMusica.br.com.alura.desafiomusica.modelos.Podcast;
 
@@ -29,6 +30,10 @@ public class Principal {
         for (int i = 0; i < 1000; i++) {
             meuPodcast.curte();
         }
+
+        MinhasPreferidas preferidas = new MinhasPreferidas();
+        preferidas.inclui(meuPodcast);
+        preferidas.inclui(minhaMusica);
 
     }
 
