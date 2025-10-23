@@ -5,7 +5,7 @@ public class Audio {
     private String titulo;
     private int totalReproducoes;
     private int totalCurtidas;
-    private int classificacao;
+    private double classificacao;
 
     public String getTitulo() {
         return titulo;
@@ -31,11 +31,11 @@ public class Audio {
         this.totalCurtidas = totalCurtidas;
     }
 
-    public int getClassificacao() {
+    public double getClassificacao() {
         return classificacao;
     }
 
-    public void setClassificacao(int classificacao) {
+    public void setClassificacao(double classificacao) {
         this.classificacao = classificacao;
     }
 
