@@ -19,7 +19,11 @@ public class Compras {
 
     @Override
     public String toString() {
-        return "Compras [descricao=" + descricao + ", valor=" + valor + "]";
+        return "Compra: Descrição = "
+                + descricao
+                + ", valor="
+                + valor
+                + "]";
     }
 
 }
