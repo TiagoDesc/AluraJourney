@@ -28,7 +28,8 @@ public class Compras implements Comparable<Compras> {
 
     @Override
     public int compareTo(Compras outraCompra) {
-        return Double.valueOf(this.valor).compareTo(Double.valueOf(outraCompra.valor));
+        return Double.compare(this.valor, outraCompra.valor);
+
     }
 
 }
