@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": [
+        ".",
+        "ScreenMatch"
+    ],
+    "java.project.referencedLibraries": [
+        "c:\\Users\\nobre\\Downloads\\gson-2.13.2.jar"
+    ]
+}
