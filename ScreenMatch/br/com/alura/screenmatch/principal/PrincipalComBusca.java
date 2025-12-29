@@ -7,6 +7,8 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.Scanner;
 
+import com.google.gson.Gson;
+
 public class PrincipalComBusca {
 
     public static void main(String[] args) throws IOException, InterruptedException {
@@ -24,6 +26,8 @@ public class PrincipalComBusca {
         System.out.println(response.body());
 
         sc.close();
+
+        Gson gson = new Gson();
     }
 
 }
