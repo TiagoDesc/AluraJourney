@@ -14,17 +14,25 @@ import br.com.alura.screenmatch.modelos.Titulo;
 public class PrincipalComBusca {
 
     public static void main(String[] args) throws IOException, InterruptedException {
+
         Scanner sc = new Scanner(System.in);
         System.out.println("Digite um filme para mais informações: ");
         var busca = sc.nextLine();
 
-        String endereco = "https://www.omdbapi.com/?t=" + busca + "&apikey=844368c4";
+        String apiKey = System.getenv("OMDB_API_KEY");
+        if (apiKey == null) {
+            throw new RuntimeException("OMDB_API_KEY não definida como variável de ambiente");
+        }
+
+        String endereco = "https://www.omdbapi.com/?t=" + busca + "&apikey=" + apiKey;
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(endereco))
                 .build();
+
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
         String json = response.body();
         System.out.println(json);
 
@@ -33,7 +41,5 @@ public class PrincipalComBusca {
         System.out.println(meuTitulo);
 
         sc.close();
-
     }
-
 }
