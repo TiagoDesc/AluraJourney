@@ -6,6 +6,13 @@
             "name": "PrincipalComBusca",
             "request": "launch",
             "mainClass": "br.com.alura.screenmatch.principal.PrincipalComBusca",
+            "projectName": "CarreiraAlura_9e692a7b"
+        },
+        {
+            "type": "java",
+            "name": "PrincipalComBusca",
+            "request": "launch",
+            "mainClass": "br.com.alura.screenmatch.principal.PrincipalComBusca",
             "projectName": "CarreiraAlura_cbab3347"
         },
         {
