@@ -22,20 +22,31 @@ public class PrincipalComBusca {
         var busca = sc.nextLine();
         String endereco = "https://www.omdbapi.com/?t=" + busca + "&apikey=844368c4";
 
-        HttpClient client = HttpClient.newHttpClient();
-        HttpRequest request = HttpRequest.newBuilder().uri(URI.create(endereco)).build();
-        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        try {
+            HttpClient client = HttpClient.newHttpClient();
+            HttpRequest request = HttpRequest.newBuilder().uri(URI.create(endereco)).build();
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-        String json = response.body();
-        System.out.println(json);
+            String json = response.body();
+            System.out.println(json);
 
-        Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
+            Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
 
-        TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
-        System.out.println(meuTituloOmdb);
-        Titulo meuTitulo = new Titulo(meuTituloOmdb);
-        System.out.println("Título convertido: ");
-        System.out.println(meuTitulo);
+            TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
+            System.out.println(meuTituloOmdb);
+
+            Titulo meuTitulo = new Titulo(meuTituloOmdb);
+            System.out.println("Título convertido: ");
+            System.out.println(meuTitulo);
+        } catch (NumberFormatException e) {
+            System.out.println("Não foi possível converter o ano de lançamento ou a duração do filme.");
+            System.out.println("Verifique se os dados estão no formato correto: " + e.getMessage());
+        } catch (IllegalArgumentException e) {
+            System.out.println(
+                    "Ocorreu um erro ao processar a resposta da API. Verifique se a resposta contém os dados esperados.");
+        }
+
+        System.out.println("O programa finalizou corretamente.");
         sc.close();
     }
 }
