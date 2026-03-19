@@ -1,12 +1,8 @@
 package br.com.alura.screenmatch.modelos;
 
-import com.google.gson.annotations.SerializedName;
-
 public class Titulo implements Comparable<Titulo> {
 
-    @SerializedName("Title")
     protected String nome;
-    @SerializedName("Year")
     protected int anoDeLancamento;
     protected boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
