@@ -41,7 +41,7 @@ public class PrincipalComBusca {
             System.out.println("Título convertido: ");
             System.out.println(meuTitulo);
 
-            FileWriter escrita = new FileWriter("filmes.txt");
+            FileWriter escrita = new FileWriter("filmes.json");
             escrita.write(meuTitulo.toString());
             escrita.close();
 
