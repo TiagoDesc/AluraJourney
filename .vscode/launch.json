@@ -5,6 +5,13 @@
             "type": "java",
             "name": "Program",
             "request": "launch",
+            "mainClass": "OOP_Java.Library.Program",
+            "projectName": "CarreiraAlura_9e692a7b"
+        },
+        {
+            "type": "java",
+            "name": "Program",
+            "request": "launch",
             "mainClass": "OOP_Java.IT_Store.Program",
             "projectName": "CarreiraAlura_9e692a7b"
         },
